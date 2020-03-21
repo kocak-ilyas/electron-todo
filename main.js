@@ -17,7 +17,7 @@ const createWindow = () => {
         webPreferences: { nodeIntegration: true }
     })
     mainWindow.loadFile(path.join(__dirname, 'index.html'));
-    mainWindow.setResizable = false
+    // mainWindow.setResizable = false
 
     connectMySQL()
     mainWindow.webContents.once("dom-ready", () => { getDataMysql() })
@@ -61,7 +61,7 @@ function addDataMysql(arg) {
         console.log("running alert");
         const alertEmpty = {
             type: "question",
-            buttons: ["Ok"],
+            buttons: ["Okey"],
             title: "Do you know what you're doing?",
             message: "A blank entry!!!"
         }
